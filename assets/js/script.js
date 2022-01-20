@@ -53,11 +53,11 @@ function generatePassword() {
   }
 
   /* 
-   Time to generate a randomized string! This loop will 
-   randomly select characters in the validChar string. It will 
-   keep putting them in the currentPassword string until the
-   length of the currentPassword string is equal to the length 
-   that the user wanted their password to be.
+  Time to generate a randomized string! This loop will 
+  randomly select characters in the validChar string. It will 
+  keep putting them in the currentPassword string until the
+  length of the currentPassword string is equal to the length 
+  that the user wanted their password to be.
   */
   for (let i = 0; i < passLength; i++) {
     currentPassword += validChar[Math.floor(Math.random() * validChar.length)];
