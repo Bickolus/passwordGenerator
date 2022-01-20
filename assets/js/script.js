@@ -45,19 +45,20 @@ function generatePassword() {
   if (haveSpecial) {
     validChar += specList;
   }
-  
+
   // If validChar string is still empty (meaning they said no to everything), close function immediately
   if (validChar == '') {
     alert("One password with nothing in it coming right up!\nHehe, just kidding. Pick at least one criterion please.");
     return '';
   }
 
-/* Time to generate a randomized string! This loop will 
+  /* 
+   Time to generate a randomized string! This loop will 
    randomly select characters in the validChar string. It will 
    keep putting them in the currentPassword string until the
    length of the currentPassword string is equal to the length 
    that the user wanted their password to be.
-*/
+  */
   for (let i = 0; i < passLength; i++) {
     currentPassword += validChar[Math.floor(Math.random() * validChar.length)];
   }
